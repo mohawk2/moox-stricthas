@@ -29,6 +29,9 @@ WriteMakefile(
         url => 'git@github.com:mohawk2/moox-stricthas.git',
         web => 'https://github.com/mohawk2/moox-stricthas',
       },
+      bugtracker  => {
+        web => 'https://github.com/mohawk2/moox-stricthas/issues',
+      },
       license => [ 'http://dev.perl.org/licenses/' ],
     },
     prereqs => {
