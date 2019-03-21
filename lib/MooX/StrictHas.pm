@@ -38,7 +38,7 @@ sub import {
 
 =head1 NAME
 
-MooX::StrictHas - Allow Moo attributes to get their values from %ENV
+MooX::StrictHas - Forbid "has" attributes lazy_build and auto_deref
 
 =begin markdown
 
@@ -57,7 +57,6 @@ MooX::StrictHas - Allow Moo attributes to get their values from %ENV
   package MyMod;
   use Moo;
   use MooX::StrictHas;
-  # look for $ENV{attr_val} and $ENV{ATTR_VAL}
   has attr => (
     is => 'ro',
     auto_deref => 1, # blows up, not implemented in Moo
