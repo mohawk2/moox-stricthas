@@ -80,7 +80,7 @@ This is not considered best practice - just dereference in your using code.
 
 =item lazy_build
 
-Use C<is => 'lazy'> instead.
+Use C<is =E<gt> 'lazy'> instead.
 
 =back
 

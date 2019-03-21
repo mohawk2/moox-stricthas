@@ -36,7 +36,7 @@ does not implement, but silently accepts:
 
 - lazy\_build
 
-    Use `is =` 'lazy'> instead.
+    Use `is => 'lazy'` instead.
 
 # AUTHOR
 
