@@ -33,6 +33,7 @@ sub import {
       : ()
       for sort keys %ATTR2MESSAGE;
     croak join "\n", @messages if @messages;
+    $orig->($namespec, %opts);
   });
 }
 

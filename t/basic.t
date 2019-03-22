@@ -1,21 +1,26 @@
 use Test::More;
 
 my $TEMPLATE = <<'EOF';
-package MyMod%d;
+package %s;
 use Moo;
 use MooX::StrictHas;
-has attr => (%s);
+has attr => (is => 'ro', %s);
 EOF
 
 package main;
 
-my $pkgcount = 0;
+my $pkg = 'MyMod00';
 sub test_with_attr {
   my ($attr, $expected) = @_;
   local $Test::Builder::Level = $Test::Builder::Level + 1;
   local $@;
-  eval sprintf $TEMPLATE, $pkgcount++, $attr;
-  like $@, $expected, "$attr";
+  eval sprintf $TEMPLATE, ++$pkg, $attr;
+  like $@, $expected, $attr;
+  return if $@; # blew up, stop
+  my $obj = eval { $pkg->new(attr => 1) };
+  is $@, '', "'$attr': instantiated Ok";
+  eval { $obj->attr };
+  is $@, '', "'$attr': accessor Ok";
 }
 
 test_with_attr('', qr/^$/);

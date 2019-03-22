@@ -1,3 +1,6 @@
+0.03 
+ - make the overriding "has" call the overridden one
+
 0.02 2019-03-21
  - fix abstract/synopsis
 
