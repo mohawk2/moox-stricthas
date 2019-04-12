@@ -75,7 +75,7 @@ MooX::StrictHas - Forbid "has" attributes lazy_build and auto_deref
 =head1 DESCRIPTION
 
 This is a L<Moo> extension, intended to aid those porting modules from
-L<Moose> to Moo. It forbids two attributes for L<Moo/has>, which Moo
+L<Moose> to Moo. It forbids these attributes for L<Moo/has>, which Moo
 does not implement, but silently accepts:
 
 =over
