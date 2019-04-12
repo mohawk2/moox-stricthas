@@ -20,7 +20,7 @@ sub _override_function {
 
 my %ATTR2MESSAGE = (
   auto_deref => q{just dereference in your using code},
-  lazy_build => q{Use "is => 'lazy'" instead"},
+  lazy_build => q{Use "is => 'lazy'" instead},
   does => q{Unsupported; use "isa" instead},
 );
 sub import {
