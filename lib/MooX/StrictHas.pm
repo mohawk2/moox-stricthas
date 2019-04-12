@@ -67,7 +67,7 @@ MooX::StrictHas - Forbid "has" attributes lazy_build and auto_deref
     is => 'ro',
     lazy_build => 1, # blows up, not implemented in Moo
   );
-  has attr2 => (
+  has attr3 => (
     is => 'ro',
     does => "Thing", # blows up, not implemented in Moo
   );
